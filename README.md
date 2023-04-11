@@ -1,2 +1,0 @@
-# newssystem
-react
