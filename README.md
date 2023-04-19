@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# 新闻发布管理系统
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+本项目是一个简单的新闻发布管理系统，分为管理端和用户端。管理端登入后可管理发布新闻文章内容，用户端无需登录便可查看已发布的新闻内容。
 
-## Available Scripts
+### 实现功能
+
+- [x] 登录模块：实现用户登录；
+- [x] 首页：展示文章相关数据；
+- [x] 用户管理：管理登录用户；
+- [x] 权限管理：管理登录用户的权限，可以使用系统的哪些功能；
+- [x] 新闻管理：可撰写新闻、把新闻加到草稿箱、编辑新闻分类；
+- [x] 审核管理：用于审核用户的新闻；
+- [x] 发布管理：可发布审核通过的新闻，下线已发布的新闻；
+- [x] 游客模块：游客无需登录系统便可查看、点赞新闻，将地址改为news便可查看此页面。
+
+### 技术栈（基于 `create-react-app` 后的配置）
+
+- react v18.2.0 `hooks` + `redux` + `react-router5`
+- `axios` 封装
+- `echarts`图标展示
+- `json-server`本地数据库接口
+
+### 项目结构
+
+```js
+.
+│             
+├─db.json               // json-server的模拟数据
+├─public                // html 入口
+└─src                   // 前端项目源码
+   ├─assets             // 静态文件
+   ├─components         // 公用组件
+   ├─redux              // redux 目录
+   ├─routes             // 路由
+   ├─utils              // 工具包
+   ├─views              // 视图层
+   └─...
+
+```
 
 In the project directory, you can run:
 
-### `npm start`
+### 使用方法
 
-Runs the app in the development mode.\
-Open []() to view it in your browser.
+```bash
+git clone https://github.com/AsukaZzz7/newssystem
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 全局安装json-server
+npm install -g json-server
 
-### `npm test`
+## 安装依赖
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 在cmd项目路径中启动模拟的服务器
+json-server --watch db.json --port 3000
 
-### `npm run build`
+## 启动
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 打包
+npm build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 项目截图
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+存放于src/assets文件中
 
-### `npm run eject`
+### 后台账号密码
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- 账号：admin
+- 密码：123456
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

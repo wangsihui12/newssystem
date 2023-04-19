@@ -6,7 +6,6 @@ import { DeleteOutlined } from '@ant-design/icons'
 export default function NewsCategory (props) {
   const [dataSource, setDataSource] = useState([])
   const EditableContext = React.createContext(null)
-  const [count, setCount] = useState(0)
   const EditableRow = ({ index, ...props }) => {
     const [form] = Form.useForm()
     return (
@@ -164,18 +163,6 @@ export default function NewsCategory (props) {
     setDataSource(dataSource.filter(data => data.id !== item.id))
     axios.delete(`/categories/${item.id}`)
   }
-  // 添加
-  const handleAdd = () => {
-    const newData = {
-      title: '请输入栏目名称',
-      value: '1'
-    }
-    setDataSource([newData, ...dataSource])
-    setCount(count + 1)
-    axios.post('/categories', {
-      ...newData
-    })
-  }
   const components = {
     body: {
       row: EditableRow,
@@ -185,15 +172,6 @@ export default function NewsCategory (props) {
 
   return (
     <div>
-      <Button
-        onClick={handleAdd}
-        type='primary'
-        style={{
-          marginBottom: 16
-        }}
-      >
-        添加
-      </Button>
       <Table
         components={components}
         rowClassName={() => 'editable-row'}

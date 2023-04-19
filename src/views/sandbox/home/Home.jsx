@@ -1,10 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Card, Col, Row, List, Avatar, Drawer } from 'antd'
-import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined
-} from '@ant-design/icons'
+import { SettingOutlined } from '@ant-design/icons'
 import axios from 'axios'
 import * as Echarts from 'echarts'
 import _ from 'lodash'
@@ -211,11 +207,7 @@ export default function Home () {
                 src='https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png'
               />
             }
-            actions={[
-              <SettingOutlined key='setting' onClick={showDrawer} />,
-              <EditOutlined key='edit' />,
-              <EllipsisOutlined key='ellipsis' />
-            ]}
+            actions={[<SettingOutlined key='setting' onClick={showDrawer} />]}
           >
             <Meta
               avatar={<Avatar src='https://joesch.moe/api/v1/random' />}

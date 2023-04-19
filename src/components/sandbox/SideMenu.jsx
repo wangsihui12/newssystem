@@ -108,7 +108,7 @@ function SideMenu (props) {
   return (
     <Sider trigger={null} collapsible collapsed={props.isCollapsed}>
       {/* <div className='logo'>全球新闻发布管理系统</div> */}
-      <div className='logo'>管理系统</div>
+      <div className='logo'>新闻管理系统</div>
       <Menu
         theme='dark' // 主题颜色
         mode='inline'

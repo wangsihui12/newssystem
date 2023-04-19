@@ -31,7 +31,7 @@ export default function Login (props) {
     >
       <Particles height={document.documentElement.clientHeight} />
       <div className='formContainer'>
-        <div className='loginTitle'>管理系统</div>
+        <div className='loginTitle'>新闻管理系统</div>
         <Form
           name='basic'
           labelCol={{
@@ -51,7 +51,7 @@ export default function Login (props) {
           autoComplete='off'
         >
           <Form.Item
-            label='Username'
+            label='用户名'
             name='username'
             rules={[
               {
@@ -64,7 +64,7 @@ export default function Login (props) {
           </Form.Item>
 
           <Form.Item
-            label='Password'
+            label='密码'
             name='password'
             rules={[
               {
@@ -84,7 +84,7 @@ export default function Login (props) {
               span: 16
             }}
           >
-            <Checkbox>Remember me</Checkbox>
+            <Checkbox>记住我</Checkbox>
           </Form.Item>
 
           <Form.Item
