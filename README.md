@@ -43,7 +43,7 @@ In the project directory, you can run:
 ### 使用方法
 
 ```bash
-git clone https://github.com/AsukaZzz7/newssystem
+https://github.com/wangsihui12/newssystem
 
 ## 全局安装json-server
 npm install -g json-server
