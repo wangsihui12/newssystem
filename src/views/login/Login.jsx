@@ -31,7 +31,7 @@ export default function Login (props) {
     >
       <Particles height={document.documentElement.clientHeight} />
       <div className='formContainer'>
-        <div className='loginTitle'>新闻管理系统</div>
+        <div className='loginTitle'>全球新闻管理系统</div>
         <Form
           name='basic'
           labelCol={{
